@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF0D0CF620A5381500E34622 /* CreateContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0D0CF520A5381500E34622 /* CreateContactViewController.swift */; };
+		CF0D0CF820A5382B00E34622 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0D0CF720A5382B00E34622 /* ContactViewController.swift */; };
 		CF72A7D020A4D24C00D1BBC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF72A7CF20A4D24C00D1BBC8 /* AppDelegate.swift */; };
 		CF72A7D220A4D24C00D1BBC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF72A7D120A4D24C00D1BBC8 /* ViewController.swift */; };
 		CF72A7D520A4D24C00D1BBC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF72A7D320A4D24C00D1BBC8 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF0D0CF520A5381500E34622 /* CreateContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateContactViewController.swift; sourceTree = "<group>"; };
+		CF0D0CF720A5382B00E34622 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		CF72A7CC20A4D24C00D1BBC8 /* TestFireBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestFireBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF72A7CF20A4D24C00D1BBC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF72A7D120A4D24C00D1BBC8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +58,8 @@
 		CF72A7CE20A4D24C00D1BBC8 /* TestFireBase */ = {
 			isa = PBXGroup;
 			children = (
+				CF0D0CF720A5382B00E34622 /* ContactViewController.swift */,
+				CF0D0CF520A5381500E34622 /* CreateContactViewController.swift */,
 				CF72A7CF20A4D24C00D1BBC8 /* AppDelegate.swift */,
 				CF72A7D120A4D24C00D1BBC8 /* ViewController.swift */,
 				CF72A7D320A4D24C00D1BBC8 /* Main.storyboard */,
@@ -136,7 +142,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF72A7D220A4D24C00D1BBC8 /* ViewController.swift in Sources */,
+				CF0D0CF820A5382B00E34622 /* ContactViewController.swift in Sources */,
 				CF72A7D020A4D24C00D1BBC8 /* AppDelegate.swift in Sources */,
+				CF0D0CF620A5381500E34622 /* CreateContactViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
