@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseAuth
 
 class CreateContactViewController: UIViewController {
 
@@ -29,9 +30,16 @@ class CreateContactViewController: UIViewController {
         super.viewDidLoad()
         
         ref = Database.database().reference()
-        ref.child("123").observeSingleEvent(of: .value) { (snapshot) in
+        let user:User = Auth.auth().currentUser!
+        
+        ref.child(user.uid).observeSingleEvent(of: .value) { (snapshot) in
             print(snapshot)
-            self.accountList = snapshot.value as! [Dictionary<String, String>];
+            
+            if snapshot.exists() {
+                self.accountList = snapshot.value as! [Dictionary<String, String>];
+            } else {
+                self.accountList = []
+            }
         }
     }
 
@@ -43,6 +51,9 @@ class CreateContactViewController: UIViewController {
         
         let contact : Dictionary<String, String> = ["name": name, "email":email, "phoneNum":phoneNum, "address":address];
         self.accountList.append(contact)
-        self.ref.child("123").setValue(self.accountList)
+        let user:User = Auth.auth().currentUser!
+        self.ref.child(user.uid).setValue(self.accountList)
+        
+        self.dismiss(animated: true, completion: nil)
     }
 }
