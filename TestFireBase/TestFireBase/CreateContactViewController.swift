@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class CreateContactViewController: UIViewController {
 
@@ -14,41 +15,34 @@ class CreateContactViewController: UIViewController {
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var phoneNumTextField: UITextField!
     @IBOutlet var addressTextField: UITextField!
-    let name: String! = nil
-    let email: String = ""
-    let phoneNum: String = ""
-    let address: String = ""
+    var name: String! = nil
+    var email: String = ""
+    var phoneNum: String = ""
+    var address: String = ""
+    
+    var ref: DatabaseReference!
+    var accountList: [Dictionary<String, String>] = []
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    @IBAction func saveData(_ sender: UIBarButtonItem) {
-        if name == nil {
-            print("Name cannot be nil!")
-        } else {
-
+        
+        ref = Database.database().reference()
+        ref.child("123").observeSingleEvent(of: .value) { (snapshot) in
+            print(snapshot)
+            self.accountList = snapshot.value as! [Dictionary<String, String>];
         }
     }
-    
-    
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func saveData(_ sender: UIBarButtonItem) {
+        name = nameTextField.text!;
+        email = emailTextField.text!;
+        phoneNum = phoneNumTextField.text!;
+        address = addressTextField.text!;
+        
+        let contact : Dictionary<String, String> = ["name": name, "email":email, "phoneNum":phoneNum, "address":address];
+        self.accountList.append(contact)
+        self.ref.child("123").setValue(self.accountList)
     }
-    */
-
 }

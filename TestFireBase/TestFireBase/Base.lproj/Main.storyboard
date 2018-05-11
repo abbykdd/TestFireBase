@@ -23,12 +23,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="Read contact"/>
-                                <connections>
-                                    <segue destination="8uD-sf-Nz4" kind="show" id="0y1-zL-9bG"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YSL-QW-BsA">
-                                <rect key="frame" x="99" y="159" width="177" height="64"/>
+                                <rect key="frame" x="99" y="583" width="177" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="Create contact"/>
@@ -54,33 +51,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rSy-TM-bcY">
-                                <rect key="frame" x="52" y="83" width="270" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Q5-ya-rFY">
-                                <rect key="frame" x="51" y="274" width="273" height="30"/>
+                                <rect key="frame" x="51" y="105" width="273" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E_mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CcJ-MS-lB3">
-                                <rect key="frame" x="51" y="330" width="273" height="30"/>
+                                <rect key="frame" x="51" y="161" width="273" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y0O-Ud-2Ft">
-                                <rect key="frame" x="51" y="391" width="273" height="30"/>
+                                <rect key="frame" x="51" y="222" width="273" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6iq-X6-k3x">
-                                <rect key="frame" x="51" y="451" width="273" height="30"/>
+                                <rect key="frame" x="51" y="282" width="273" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -98,11 +91,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="address" destination="6iq-X6-k3x" id="Rpj-eY-Nn8"/>
-                        <outlet property="email" destination="CcJ-MS-lB3" id="viw-fJ-hGz"/>
-                        <outlet property="name" destination="0Q5-ya-rFY" id="YhY-3j-lqV"/>
-                        <outlet property="nameTextField" destination="Bk6-1E-MDC" id="c6t-m8-BZW"/>
-                        <outlet property="phoneNum" destination="y0O-Ud-2Ft" id="Nz3-6m-SFD"/>
+                        <outlet property="addressTextField" destination="6iq-X6-k3x" id="69s-qg-i5v"/>
+                        <outlet property="emailTextField" destination="CcJ-MS-lB3" id="moz-wV-PHR"/>
+                        <outlet property="nameTextField" destination="0Q5-ya-rFY" id="PHG-uL-SIH"/>
+                        <outlet property="phoneNumTextField" destination="y0O-Ud-2Ft" id="GdZ-hc-eBu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i2h-iS-MB4" userLabel="First Responder" sceneMemberID="firstResponder"/>
