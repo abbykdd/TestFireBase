@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import FirebaseAuthUI
+import FirebaseGoogleAuthUI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,7 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         FirebaseApp.configure()
-        FirebaseApp.
+        let authUI = FUIAuth.defaultAuthUI()
+        // You need to adopt a FUIAuthDelegate protocol to receive callback
+        authUI?.delegate = self
         
         return true
     }

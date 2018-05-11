@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestFireBase/CreateContactViewController.swift"
-            timestampString = "547705142.1565551"
+            timestampString = "547705770.674971"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestFireBase/CreateContactViewController.swift"
-            timestampString = "547705142.156882"
+            timestampString = "547705770.675042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "saveData(_:)"
             landmarkType = "7">
          </BreakpointContent>
